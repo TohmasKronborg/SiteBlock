@@ -2,6 +2,7 @@ body{
     margin: 0;
 
     display: flex;
+    color: #101828;
 }
 
 nav{
@@ -21,7 +22,7 @@ nav header{
 }
 
 nav header svg{
-    background-color: #155DFC;
+    background: #155DFC;
     padding: 8px;
     border-radius: 10px;
 
@@ -35,7 +36,7 @@ nav button{
 
     border: none;
     border-radius: 10px;
-    background-color: white;
+    background: white;
 
     color: #364153;
     font-size: 18px;
@@ -50,7 +51,7 @@ nav button svg{
 }
 
 nav button:hover{
-    background-color: #F9FAFB;
+    background: #F9FAFB;
 }
 
 main{
@@ -67,9 +68,22 @@ section article{
     padding: 24px 24px 24px 24px;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 1.5rem;
 
     border-radius: 14px;
     border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+label{
+    color: #0A0A0A;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.label{
+    color: #0A0A0A;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .flex-column{
@@ -85,6 +99,12 @@ section article{
     margin: 0;
 }
 
+.h2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
 .color-secondary{
     color: #4A5565;
 }
@@ -94,7 +114,7 @@ section article{
 }
 
 .active-btn{
-    background-color: #EFF6FF;
+    background: #EFF6FF;
     color: #155DFC;
 }
 
@@ -109,7 +129,7 @@ section article{
 .grey-input{
     padding: 4px 12px;
     align-items: center;
-    height: 36px;
+    height: 32px;
     width: 100%;
 
     border-radius: 8px;
@@ -121,8 +141,9 @@ section article{
     align-items: center;
     flex-shrink: 0;
     align-self: stretch;
-    height: 42px;
+    height: 32px;
     width: 100%;
+    margin-top: 5px;
 
     border-radius: 10px;
     border: 1px solid #D1D5DC;
@@ -143,4 +164,27 @@ section article{
     font-size: 16px;
     font-weight: 600;
     text-wrap: nowrap;
+}
+
+.add-btn:hover{
+    background: #1D1C2B;
+}
+
+.no-block-message{
+    margin: 50px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+
+}
+
+.week-days-container{
+    display: grid;
+    height: 80px;
+    row-gap: 8px;
+    column-gap: 8px;
+    flex-shrink: 0;
+    align-self: stretch;
+    grid-template-rows: repeat(2,minmax(0,1fr));
+    grid-template-columns: repeat(4,minmax(0,1fr));
 }

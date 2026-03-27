@@ -13,11 +13,11 @@
             </svg>
             <div>
                 <h1 class="m-0">Site blocker</h1>
-                <p class="m-0 color-secondary">configuration</p>
+                <p class="m-0 color-secondary subHeader">configuration</p>
             </div>
         </header>
 
-        <!-- Link navigation -->
+        <!-- Tabs navigation -->
         <div class="flex-column" style="padding: 16px; gap: 8px;">
             <!-- Words -->
             <button id="word-btn">
@@ -77,22 +77,26 @@
             <!-- Add word -->
             <article>
                 <div class="d-flex" style="gap: 12px; width: 100%;">
-                    <label for="linkInput"></label>
-                    <input id="linkInput" type="text" class="grey-input" placeholder="Enter a word or phrase...">
+                    <label for="wordInput"></label>
+                    <input id="wordInput" type="text" class="grey-input" placeholder="Enter a word or phrase..." autocomplete="off">
 
-                    <button class="add-btn">
+                    <button id="addWord" class="add-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M8 3.33334V12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-
-                        Add word
+                        Add Word
                     </button>
                 </div>
             </article>
 
-
+            <!-- Blocked Words -->
+            <article>
+                <h3 class="h2">Active Blocked Words (<span id="WordCount">0</span>)</h3>
+                <p id="WordMessage" class="no-block-message color-secondary">No blocked words yet. Add some to get started.</p>
+            </article>
         </section >
+
 
         <!-- Links -->
         <section id="link-config">
@@ -101,28 +105,97 @@
                 <p class="m-0 subHeader color-secondary">Block specific websites or domains. Enter the URL without http:// or https://</p>
             </div>
 
-            <!-- Add word -->
+            <!-- Add link -->
             <article>
                 <div class="d-flex" style="gap: 12px; width: 100%;">
-                    <label for="wordInput"></label>
-                    <input id="wordInput" type="text" class="grey-input" placeholder="example.com or www.example.com">
+                    <label for="linkInput"></label>
+                    <input id="linkInput" type="url" class="grey-input" placeholder="example.com or www.example.com" autocomplete="off">
 
-                    <button class="add-btn">
+                    <button id="addLink" class="add-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M8 3.33334V12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-
-                        Add link
+                        Add Link
                     </button>
                 </div>
             </article>
+
+            <!-- Blocked links -->
+            <article>
+                <h3 class="h2">Active Blocked Links(<span id="LinkCount">0</span>)</h3>
+                <p id="LinkMessage" class="no-block-message color-secondary">No blocked links yet. Add some to get started.</p>
+            </article>
         </section>
+
 
         <!-- Schedule -->
         <section id="schedule-config">
-            <h2 class="m-0">Blocked Links</h2>
-            <p class="m-0 subHeader color-secondary">Set up time-based rules to block sites during specific hours and days.</p>
+            <div style="margin-bottom: 34px;">
+                <h2 class="m-0">Blocked Links</h2>
+                <p class="m-0 subHeader color-secondary">Set up time-based rules to block sites during specific hours and days.</p>
+            </div>
+
+            <!-- Schedule add btn -->
+            <button style="margin-bottom: 24px;" id="addSchedule" class="add-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 3.33334V12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Add Schedule
+            </button>
+
+            <!-- Schedule add controls -->
+            <article id="addScheduleControls">
+                <h3 class="h2" style="margin-bottom: 40px">New Schedule Rule</h3>
+                <div style="gap: 16px; width: 100%;">
+                    <div>
+                        <label for="scheduleName">Schedule Name</label>
+                        <input id="scheduleName" class="standard-input" type="text">
+                    </div>
+
+                    <div>
+                        <p class="label">Days of Week</p>
+                        
+                        <div class="week-days-container"> <!-- Radio Container -->
+                                <input type="checkbox" class="btn-check week-days" id="btn-monday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-monday">Monday</label>
+
+                                <input type="checkbox" class="btn-check week-days" id="btn-tuesday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-tuesday">Tuesday</label>
+
+                                <input type="checkbox" class="btn-check week-days" id="btn-wednesday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-wednesday">Wednesday</label>
+
+                                <input type="checkbox" class="btn-check week-days" id="btn-thursday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-thursday">Thursday</label>
+
+                                <input type="checkbox" class="btn-check week-days" id="btn-friday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-friday">Friday</label>
+
+                                <input type="checkbox" class="btn-check week-days" id="btn-saturday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-saturday">Saturday</label>
+
+                                <input type="checkbox" class="btn-check week-days" id="btn-sunday" autocomplete="off">
+                                <label class="btn btn-primary" for="btn-sunday">Sunday</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Schedules message. -->
+            <article id="noSchedules">
+                <div class="no-block-message">
+                    <svg style="margin: 0 auto;" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#D1D5DC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 12V24L32 28" stroke="#D1D5DC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p id="ScheduleMessage" class="color-secondary">No schedules configured. Click "Add Schedule" to create one.</p>
+                </div>
+            </article>
         </section>
 
     </main>
