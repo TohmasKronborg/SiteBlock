@@ -5,7 +5,8 @@ body{
 }
 
 nav{
-    width: 255px;
+    min-width: 255px;
+    max-width: 255px;
     height: 100vh;
 
     border-right: 1px solid #E5E7EB;
@@ -16,6 +17,7 @@ nav header{
     display: flex;
 
     align-items: center;
+    border-bottom: 1px solid #E5E7EB;
 }
 
 nav header svg{
@@ -26,10 +28,66 @@ nav header svg{
     margin-right: 12px;
 }
 
+nav button{
+    text-align: start;
+    padding: 14px 16px;
+    gap: 12px;
+
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+
+    color: #364153;
+    font-size: 16px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+}
+
+nav button svg{
+    stroke: #364153;
+}
+
+nav button:hover{
+    background-color: #F9FAFB;
+}
+
+main{
+    width: 870px;
+    padding: 32px 0 0 32px;
+}
+
+section h2{
+    font-size: 30px;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
 .m-0 {
     margin: 0;
 }
 
-.font-color-secondary{
+.color-secondary{
     color: #4A5565;
+}
+
+.subHeader{
+    font-size: 16px
+}
+
+.active-btn{
+    background-color: #EFF6FF;
+    color: #155DFC;
+}
+
+.active-btn svg{
+    stroke: #155DFC; !important;
+}
+
+.hidden{
+    display: none;
 }

@@ -12,9 +12,80 @@
             </svg>
             <div>
                 <h1 class="m-0">Site blocker</h1>
-                <p class="m-0">configuration</p>
+                <p class="m-0 color-secondary">configuration</p>
             </div>
         </header>
+
+        <!-- Link navigation -->
+        <div class="flex-column" style="padding: 16px; gap: 8px;">
+            <!-- Words -->
+            <button id="word-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3.33334 5.83334V3.33334H16.6667V5.83334" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.5 16.6667H12.5" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 3.33334V16.6667" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                Words
+            </button>
+
+            <!-- Links -->
+            <button id="link-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_10_26)">
+                        <path d="M8.33334 10.8333C8.69122 11.3118 9.14781 11.7077 9.67214 11.9941C10.1965 12.2806 10.7763 12.4509 11.3722 12.4936C11.9682 12.5363 12.5663 12.4503 13.1261 12.2415C13.6859 12.0327 14.1943 11.7059 14.6167 11.2833L17.1167 8.78335C17.8757 7.9975 18.2956 6.94499 18.2862 5.85251C18.2767 4.76002 17.8385 3.71497 17.0659 2.94243C16.2934 2.1699 15.2483 1.7317 14.1558 1.7222C13.0634 1.71271 12.0109 2.13269 11.225 2.89168L9.79168 4.31668" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.6667 9.16668C11.3088 8.68824 10.8522 8.29236 10.3279 8.0059C9.80356 7.71943 9.22376 7.54908 8.62781 7.5064C8.03185 7.46372 7.43369 7.54971 6.87389 7.75853C6.31409 7.96735 5.80575 8.29412 5.38335 8.71668L2.88335 11.2167C2.12436 12.0025 1.70438 13.055 1.71387 14.1475C1.72337 15.24 2.16157 16.2851 2.9341 17.0576C3.70664 17.8301 4.75169 18.2683 5.84418 18.2778C6.93666 18.2873 7.98917 17.8673 8.77501 17.1083L10.2 15.6833" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_10_26">
+                            <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                Links
+            </button>
+
+            <!-- Schedule -->
+            <button id="schedule-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_10_33)">
+                        <path d="M9.99999 18.3334C14.6024 18.3334 18.3333 14.6024 18.3333 10C18.3333 5.39765 14.6024 1.66669 9.99999 1.66669C5.39762 1.66669 1.66666 5.39765 1.66666 10C1.66666 14.6024 5.39762 18.3334 9.99999 18.3334Z" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 5V10L13.3333 11.6667" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_10_33">
+                            <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+                Schedule
+            </button>
+        </div>
     </nav>
+
+    <main>
+        <!-- Words -->
+        <section id="word-config">
+            <h2 class="m-0">Blocked Words</h2>
+            <p class="m-0 subHeader color-secondary">Add words or phrases to block websites containing them. This helps filter out unwanted content.</p>
+        </section >
+
+        <!-- Links -->
+        <section id="link-config">
+            <h2 class="m-0">Blocked Links</h2>
+            <p class="m-0 subHeader color-secondary">Block specific websites or domains. Enter the URL without http:// or https://</p>
+        </section>
+
+        <!-- Schedule -->
+        <section id="schedule-config">
+            <h2 class="m-0">Blocked Links</h2>
+            <p class="m-0 subHeader color-secondary">Set up time-based rules to block sites during specific hours and days.</p>
+        </section>
+
+    </main>
+
+    <script src="btnFunctions.js"></script>
 </body>
 </html>
