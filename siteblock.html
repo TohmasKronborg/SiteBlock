@@ -69,14 +69,54 @@
     <main>
         <!-- Words -->
         <section id="word-config">
-            <h2 class="m-0">Blocked Words</h2>
-            <p class="m-0 subHeader color-secondary">Add words or phrases to block websites containing them. This helps filter out unwanted content.</p>
+            <div style="margin-bottom: 34px;">
+                <h2 class="m-0">Blocked Words</h2>
+                <p class="m-0 subHeader color-secondary">Add words or phrases to block websites containing them. This helps filter out unwanted content.</p>
+            </div>
+
+            <!-- Add word -->
+            <article>
+                <div class="d-flex" style="gap: 12px; width: 100%;">
+                    <label for="linkInput"></label>
+                    <input id="linkInput" type="text" class="grey-input" placeholder="Enter a word or phrase...">
+
+                    <button class="add-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.33334V12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        Add word
+                    </button>
+                </div>
+            </article>
+
+
         </section >
 
         <!-- Links -->
         <section id="link-config">
-            <h2 class="m-0">Blocked Links</h2>
-            <p class="m-0 subHeader color-secondary">Block specific websites or domains. Enter the URL without http:// or https://</p>
+            <div style="margin-bottom: 34px">
+                <h2 class="m-0">Blocked Links</h2>
+                <p class="m-0 subHeader color-secondary">Block specific websites or domains. Enter the URL without http:// or https://</p>
+            </div>
+
+            <!-- Add word -->
+            <article>
+                <div class="d-flex" style="gap: 12px; width: 100%;">
+                    <label for="wordInput"></label>
+                    <input id="wordInput" type="text" class="grey-input" placeholder="example.com or www.example.com">
+
+                    <button class="add-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3.33325 8H12.6666" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 3.33334V12.6667" stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                        Add link
+                    </button>
+                </div>
+            </article>
         </section>
 
         <!-- Schedule -->
