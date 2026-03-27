@@ -3,6 +3,8 @@ body{
 
     display: flex;
     color: #101828;
+
+    font-family: Inter, sans-serif;
 }
 
 nav{
@@ -95,6 +97,12 @@ label{
     display: flex;
 }
 
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .m-0 {
     margin: 0;
 }
@@ -178,13 +186,36 @@ label{
 
 }
 
-.week-days-container{
-    display: grid;
-    height: 80px;
-    row-gap: 8px;
-    column-gap: 8px;
-    flex-shrink: 0;
-    align-self: stretch;
-    grid-template-rows: repeat(2,minmax(0,1fr));
-    grid-template-columns: repeat(4,minmax(0,1fr));
+.blocked-word{
+    display: flex;
+    height: 42px;
+    padding: 0 16px;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 10px;
+    border: 1px solid #FFC9C9;
+    background: #FEF2F2;
+
+    color: #C10007;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.blocked-word button{
+    border: none;
+    background-color: #FEF2F2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.blocked-word button:hover{
+    background: #FFE2E2;
+
+}
+
+.week-days-container input{
+    display: none;
 }
