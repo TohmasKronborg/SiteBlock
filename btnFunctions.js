@@ -29,4 +29,4 @@ Object.entries(tabs).forEach(([key, { btn }]) => {
 });
 
 
-showTab("schedule");
+showTab("link");
