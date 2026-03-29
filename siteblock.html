@@ -95,7 +95,7 @@
                 <h3 class="h2">Active Blocked Words (<span id="WordCount">0</span>)</h3>
                 <p id="WordMessage" class="no-block-message color-secondary">No blocked words yet. Add some to get started.</p>
 
-                <div> <!-- Blocked Link containers -->
+                <div id="blocked-words"> <!-- Blocked word containers -->
 
                     <div class="blocked-word">
                         <span>Blocked Word</span>
@@ -153,6 +153,82 @@
             <article>
                 <h3 class="h2">Active Blocked Links(<span id="LinkCount">0</span>)</h3>
                 <p id="LinkMessage" class="no-block-message color-secondary">No blocked links yet. Add some to get started.</p>
+
+                <div id="blocked-links" style="width: 100%;"> <!-- Blocked Links container -->
+
+                    <div class="blocked-link">
+                        <div class="flex-center" style="gap: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M12.5 2.5H17.5V7.5" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.33325 11.6667L17.4999 2.5" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 10.8333V15.8333C15 16.2754 14.8244 16.6993 14.5118 17.0118C14.1993 17.3244 13.7754 17.5 13.3333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V6.66667C2.5 6.22464 2.67559 5.80072 2.98816 5.48816C3.30072 5.17559 3.72464 5 4.16667 5H9.16667" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h4>Blocked Link name</h4>
+                        </div>
+                        <div>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <g clip-path="url(#clip0_34_195)">
+                                        <path d="M14.1161 4.54132C14.4686 4.18894 14.6666 3.71097 14.6667 3.21256C14.6668 2.71415 14.4688 2.23613 14.1165 1.88366C13.7641 1.53118 13.2861 1.33313 12.7877 1.33307C12.2893 1.33301 11.8113 1.53094 11.4588 1.88332L2.56145 10.7827C2.40667 10.937 2.29219 11.127 2.22812 11.336L1.34745 14.2373C1.33022 14.295 1.32892 14.3562 1.34369 14.4146C1.35845 14.4729 1.38873 14.5261 1.43132 14.5687C1.4739 14.6112 1.5272 14.6414 1.58556 14.656C1.64392 14.6707 1.70516 14.6693 1.76279 14.652L4.66479 13.772C4.87357 13.7085 5.06357 13.5947 5.21812 13.4407L14.1161 4.54132Z" stroke="#155DFC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 3.33331L12.6667 5.99998" stroke="#155DFC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_34_195">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2 4H14" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.6666 4V13.3333C12.6666 14 11.9999 14.6667 11.3333 14.6667H4.66659C3.99992 14.6667 3.33325 14 3.33325 13.3333V4" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.33325 3.99998V2.66665C5.33325 1.99998 5.99992 1.33331 6.66659 1.33331H9.33325C9.99992 1.33331 10.6666 1.99998 10.6666 2.66665V3.99998" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.66675 7.33331V11.3333" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.33325 7.33331V11.3333" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="blocked-link">
+                        <div class="flex-center" style="gap: 8px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M12.5 2.5H17.5V7.5" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8.33325 11.6667L17.4999 2.5" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 10.8333V15.8333C15 16.2754 14.8244 16.6993 14.5118 17.0118C14.1993 17.3244 13.7754 17.5 13.3333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V6.66667C2.5 6.22464 2.67559 5.80072 2.98816 5.48816C3.30072 5.17559 3.72464 5 4.16667 5H9.16667" stroke="#99A1AF" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <h4>Blocked Link name</h4>
+                        </div>
+                        <div>
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <g clip-path="url(#clip0_34_195)">
+                                        <path d="M14.1161 4.54132C14.4686 4.18894 14.6666 3.71097 14.6667 3.21256C14.6668 2.71415 14.4688 2.23613 14.1165 1.88366C13.7641 1.53118 13.2861 1.33313 12.7877 1.33307C12.2893 1.33301 11.8113 1.53094 11.4588 1.88332L2.56145 10.7827C2.40667 10.937 2.29219 11.127 2.22812 11.336L1.34745 14.2373C1.33022 14.295 1.32892 14.3562 1.34369 14.4146C1.35845 14.4729 1.38873 14.5261 1.43132 14.5687C1.4739 14.6112 1.5272 14.6414 1.58556 14.656C1.64392 14.6707 1.70516 14.6693 1.76279 14.652L4.66479 13.772C4.87357 13.7085 5.06357 13.5947 5.21812 13.4407L14.1161 4.54132Z" stroke="#155DFC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10 3.33331L12.6667 5.99998" stroke="#155DFC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_34_195">
+                                            <rect width="16" height="16" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M2 4H14" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.6666 4V13.3333C12.6666 14 11.9999 14.6667 11.3333 14.6667H4.66659C3.99992 14.6667 3.33325 14 3.33325 13.3333V4" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.33325 3.99998V2.66665C5.33325 1.99998 5.99992 1.33331 6.66659 1.33331H9.33325C9.99992 1.33331 10.6666 1.99998 10.6666 2.66665V3.99998" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.66675 7.33331V11.3333" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.33325 7.33331V11.3333" stroke="#E7000B" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
             </article>
         </section>
 
@@ -177,43 +253,68 @@
             <article id="addScheduleControls">
                 <h3 class="h2" style="margin-bottom: 40px">New Schedule Rule</h3>
 
-                <div style="gap: 16px; width: 100%;">
-                    <div>
+                <div class="w-100">
+                    <div class="mb-16"> <!--  Schedule Name -->
                         <label for="scheduleName">Schedule Name</label>
                         <input id="scheduleName" class="standard-input" type="text">
                     </div>
 
-                    <div>
-                        <p class="label">Days of Week</p>
+                    <div class="mb-16"> <!-- Weekday radios -->
+                        <p class="label" style="font-weight: 550;">Days of Week</p>
                         
                         <div class="week-days-container"> <!-- Radio Container -->
-                                <input type="checkbox" class="btn-check week-days" id="btn-monday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-monday">Monday</label>
+                                <input type="checkbox" class="week-days" id="btn-monday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-monday">Monday</label>
 
-                                <input type="checkbox" class="btn-check week-days" id="btn-tuesday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-tuesday">Tuesday</label>
+                                <input type="checkbox" class="week-days" id="btn-tuesday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-tuesday">Tuesday</label>
 
-                                <input type="checkbox" class="btn-check week-days" id="btn-wednesday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-wednesday">Wednesday</label>
+                                <input type="checkbox" class="week-days" id="btn-wednesday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-wednesday">Wednesday</label>
 
-                                <input type="checkbox" class="btn-check week-days" id="btn-thursday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-thursday">Thursday</label>
+                                <input type="checkbox" class="week-days" id="btn-thursday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-thursday">Thursday</label>
 
-                                <input type="checkbox" class="btn-check week-days" id="btn-friday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-friday">Friday</label>
+                                <input type="checkbox" class="week-days" id="btn-friday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-friday">Friday</label>
 
-                                <input type="checkbox" class="btn-check week-days" id="btn-saturday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-saturday">Saturday</label>
+                                <input type="checkbox" class="week-days" id="btn-saturday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-saturday">Saturday</label>
 
-                                <input type="checkbox" class="btn-check week-days" id="btn-sunday" autocomplete="off">
-                                <label class="btn btn-primary" for="btn-sunday">Sunday</label>
+                                <input type="checkbox" class="week-days" id="btn-sunday" autocomplete="off">
+                                <label class="btn color-secondary" for="btn-sunday">Sunday</label>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-16" style="gap: 16px;"> <!-- Start Time -->
+                        <div class="w-100">
+                            <label for="scheduleStartTime">schedule Start Time</label>
+                            <input id="scheduleStartTime" class="standard-input" type="time">
                         </div>
 
+                        <div class="w-100">
+                            <label for="scheduleEndTime">schedule End Time</label>
+                            <input id="scheduleEndTime" class="standard-input" type="time">
+                        </div>
+                    </div>
+
+                    <div class="d-flex" style="gap: 8px">
+                        <button class="add-btn">
+                            Save Schedule
+                        </button>
+
+                        <button class="cancel-btn">
+                            Cancel
+                        </button>
                     </div>
 
                 </div>
 
             </article>
+
+            <div id="scheduleList">
+
+            </div>
 
             <!-- Schedules message. -->
             <article id="noSchedules">
