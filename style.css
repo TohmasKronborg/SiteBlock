@@ -96,8 +96,17 @@ label{
     flex-direction: column;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
 .d-flex{
     display: flex;
+}
+
+.space-between{
+    justify-content: space-between;
 }
 
 .flex-center{
@@ -157,8 +166,8 @@ label{
 }
 
 .standard-input{
+    padding: 0 4px;
     align-items: center;
-    flex-shrink: 0;
     align-self: stretch;
     height: 32px;
     width: 100%;
@@ -272,8 +281,12 @@ label{
     padding: 5px;
 }
 
-.blocked-link button:hover{
+.edit:hover{
     background: #EFF6FF;
+}
+
+.remove:hover{
+    background: #FFC9C9;
 }
 
 .week-days-container input{
@@ -312,4 +325,11 @@ label{
     border-color: #155DFC;
 
     transition: 300ms;
+}
+
+.flex-row button{
+    border: none;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
 }
