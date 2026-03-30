@@ -1,14 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Simple Site Blocker",
+  "name": "Site Blocker",
   "version": "1.0",
-
-  "action": {
-    "default_title": "Open Site"
-  },
-
+  "description": "Blocks websites based on words, links, and schedules.",
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["tabs"]
+  "action": {
+    "default_title": "Open Site"
+  },
+  "icons": {
+    "16": "WebsiteFavicon.png",
+    "48": "WebsiteFavicon.png",
+    "128": "WebsiteFavicon.png"
+  }
 }
