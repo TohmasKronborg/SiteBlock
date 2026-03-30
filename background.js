@@ -23,12 +23,13 @@ function buildRules() {
                     action: {
                         type: "redirect",
                         redirect: {
-                            url: chrome.runtime.getURL("blockedRedirect.html")
+                            url: chrome.runtime.getURL("siteblock.html")
                         }
                     },
                     condition: {
                         urlFilter: item.value,
-                        resourceTypes: ["main_frame"]
+                        resourceTypes: ["main_frame"],
+                        excludedResourceTypes: ["extension"]
                     }
                 });
             });
