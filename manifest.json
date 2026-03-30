@@ -19,5 +19,11 @@
     "16": "WebsiteFavicon.png",
     "48": "WebsiteFavicon.png",
     "128": "WebsiteFavicon.png"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["siteblock.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
